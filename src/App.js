@@ -26,7 +26,7 @@ function App() {
       <MembersDiv>
         {teamData.map(data => (<TeamCard member={data} key={data.id} />))}
       </MembersDiv>
-      <Form />
+      <Form addMember={setTeamData} members={teamData}/>
     </div>
   );
 }

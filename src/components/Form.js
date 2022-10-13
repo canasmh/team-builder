@@ -8,6 +8,9 @@ const init_data = {
 
 function Form(props) {
 
+
+    const { members, addMember } = props;
+
     const [newMember, setNewMember] = useState(init_data);
 
     const inputChange = (event) => {
@@ -28,6 +31,9 @@ function Form(props) {
             <p>Fill out the form below: </p>
             <form style={{textAlign: "left", width: "30%", margin: "3rem auto"}} onSubmit={(event) => {
                 event.preventDefault();
+                addMember([...members, newMember]);
+                setNewMember(init_data);
+
 
             }}>
                 <label htmlFor="name">Full Name: </label>
@@ -51,8 +57,8 @@ function Form(props) {
                 />
                 <br />
                 <label htmlFor="role">Role:</label>
-                <select id="role" onChange={inputChange} name="role">
-                    <option value={null}></option>
+                <select id="role" onChange={inputChange} name="role" value={newMember.role}>
+                    <option value=""></option>
                     <option value="Full Stack Developer">Full Stack Developer</option>
                     <option value="Frontend Developer">Frontend Developer</option>
                     <option value="Backend Developer">Backend Developer</option>
