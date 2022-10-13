@@ -13,20 +13,20 @@ In this project you'll build an app that will keep track of memebers of a team. 
 - [x] Create a forked copy of this project.
 - [x] Clone your OWN version of the repository in your terminal
 - [x] Use `npx create-react-app .` (NOTE THE PERIOD AT THE END!) to initiate the project.
-- [ ] Start up the app using `npm start`
-- [ ] Implement the project on your newly created `main` branch, committing changes regularly.
-- [ ] Push commits: git push origin `main`.
+- [x] Start up the app using `npm start`
+- [x] Implement the project on your newly created `main` branch, committing changes regularly.
+- [x] Push commits: git push origin `main`.
 
 ### Task 2: Minimum Viable Product
 
-- [ ] Render a list of team members from state.
+- [x] Render a list of team members from state.
 - [ ] Build a form to add a new member to the list of members.
 
 #### Setup your state
 
-- [ ] Import the `useState` hook and set up state to keep your team members list.
-- [ ] Give the state variable you just declared a default value. You will need to keep track of a list of team members and each team member will have several key/value pairs associated with them.
-- [ ] Render your list of team members.
+- [x] Import the `useState` hook and set up state to keep your team members list.
+- [x] Give the state variable you just declared a default value. You will need to keep track of a list of team members and each team member will have several key/value pairs associated with them.
+- [x] Render your list of team members.
 
 #### Build your form
 

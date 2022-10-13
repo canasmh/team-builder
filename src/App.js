@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import data from './data';
+import TeamCard from './components/TeamCard';
+import styled from 'styled-components';
+
+const MembersDiv = styled.div`
+    margin: 5rem auto;
+    disply: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 60%;
+`
 
 function App() {
+  const [teamData, setTeamData] = useState(data);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h1>Welcome</h1>
       </header>
+      <h2>To our wonderful team of engineers</h2>
+      <MembersDiv>
+        {teamData.map(data => (<TeamCard member={data} key={data.id} />))}
+      </MembersDiv>
     </div>
   );
 }
