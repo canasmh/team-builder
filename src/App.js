@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import data from './data';
 import TeamCard from './components/TeamCard';
+import Form from './components/Form';
 import styled from 'styled-components';
 
 const MembersDiv = styled.div`
@@ -25,6 +26,7 @@ function App() {
       <MembersDiv>
         {teamData.map(data => (<TeamCard member={data} key={data.id} />))}
       </MembersDiv>
+      <Form />
     </div>
   );
 }
